@@ -1,0 +1,83 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+$quote: #3e5b6c;
+$footer: #343434;
+$highlight: #e2a25b;
+
+@import 'sass-bootstrap/lib/bootstrap';
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+
+}
+
+.full-width {
+    width: 100%;
+}
+
+.highlight {
+    color: $highlight !important;
+}
+
+.quote {
+    background-color: $quote;
+    padding: 25px;
+    text-align: center;
+    span {
+        font-size: 1.6em;
+    }
+    cite {
+        font-size: 1em;
+    }
+}
+
+.hero {
+    min-height: 520px;
+    position: relative;
+    overflow: hidden;
+    img {
+        position: absolute;
+        top:0;
+        z-index: -1;
+    }
+}
+
+// Fix for small button issue
+.input-group-btn {
+    .btn {
+        padding: 6.5px 12px!important;
+    }
+}
+
+.pull-up {
+    margin-top: -10px;
+}
+
+/* Custom page header */
+.header {
+    border-bottom: 1px solid #e5e5e5;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    /* Make the masthead heading the same height as the navigation */
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 40px;
+    }
+}
+
+footer {
+    background-color: $footer;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+
+}
