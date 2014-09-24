@@ -38,14 +38,23 @@ body {
     display: none;
 }
 
-h2, .clear {
+h2, h3, .clear {
     text-align: center;
     margin-top: 0;
     margin-bottom: 0;
 }
 
-.btn {
+.btn, .btn:hover {
     font-family: 'Montserrat', serif;
+    border-radius: 0;
+    background: none;
+    border: 2px solid #5cb85c;
+    color: #5cb85c
+}
+
+.btn:hover {
+    border: 2px solid darken(#5cb85c,10%);
+    color: darken(#5cb85c,10%);
 }
 
 .clear {
@@ -168,7 +177,9 @@ h2, .clear {
         text-transform: uppercase;
         color: white;
         margin-top: 12%;
+        margin-bottom: 15px;
         font-size: 6em;
+        line-height: 1;
         text-shadow: 1px 1px 3px #aaa;
         font-family: $font-header;
         letter-spacing: $letter;
