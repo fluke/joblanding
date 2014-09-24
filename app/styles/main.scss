@@ -11,7 +11,10 @@ $letter: -1.3px;
 
 /* Space out content a bit */
 body {
-    background-image: url(../images/comingsoon.jpg);
+    background: url(../images/comingsoon.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 
@@ -22,10 +25,32 @@ body {
     display: inline-block!important;
 }
 
+.footer {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    color: #fff;
+}
+
 .hide-phone {
     display: none;
 }
 
+h2, .clear {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.btn {
+    font-family: 'Montserrat', serif;
+}
+
+.clear {
+    margin-top: 15px;
+}
 
 @media screen and (max-width: $screen-phone) {
     .logo, .navbar-brand {
@@ -111,6 +136,10 @@ body {
     }
 }
 
+.center-button {
+    margin: 0 auto!important;
+}
+
 .quote {
     background-color: $quote;
     color: #fff;
@@ -138,7 +167,7 @@ body {
     .hero-text h1 {
         text-transform: uppercase;
         color: white;
-        margin-top: 50px;
+        margin-top: 12%;
         font-size: 6em;
         text-shadow: 1px 1px 3px #aaa;
         font-family: $font-header;
@@ -308,8 +337,8 @@ footer {
 
 @media screen and (max-width: $screen-phone) {
     .hero .hero-text h1 {
-        font-size: 1.85em;
-        margin-top: 20px;
+        font-size: 3em;
+        margin-top: 45%;
     }
     #hero-img {
         //height: 300px;
