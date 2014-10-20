@@ -18,6 +18,24 @@ module.exports = function (grunt) {
     // Define the configuration for all the tasks
     grunt.initConfig({
 
+        // To push to Github Pages
+        shell: {
+            deployverbose: {
+              command: './deploy.sh -v',
+              options: {
+                  stdout: true,
+                  stderr: true
+              }
+            },
+            deploy: {
+              command: './deploy.sh',
+              options: {
+                  stdout: true,
+                  stderr: true
+              }
+            }
+        },
+
         // Project settings
         yeoman: {
             // Configurable paths
@@ -433,4 +451,12 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
+
+    grunt.registerTask('deploy', 'standalone deploy command', function () {
+      if (grunt.option.flags().indexOf('--verbose') > -1) {
+        grunt.task.run('shell:deployverbose');
+      } else {
+        grunt.task.run('shell:deploy');
+      }
+    });
 };
