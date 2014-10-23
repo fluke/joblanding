@@ -2,15 +2,11 @@
 
 jQuery(document).ready(function($) {
     var resize = function() {
-        var $height = $('#hero-img').height(),
-            $top = parseInt($('#hero-img').css('top'), 10);
-        if( $(window).width() < 480){
-            $('.hero').css('min-height', $height+$top);
-        } else if( $(window).width() < 768) {
-            $('.hero').css('min-height', $height+$top-30);
-        } else {
-            $('.hero').css('min-height', $height+$top-50);
-        }
+        console.log();
+        $('.fit-height').each(function(index, el) {
+            $(el).css('height', 'auto');
+            $(el).css('height', $(el).parent().height());
+        });
     };
 
     resize();
@@ -40,7 +36,7 @@ jQuery(document).ready(function($) {
             if(isValidEmailAddress($('input[name="Email"]').val())) {
                 var formInput = $(this).serialize();
                 formInput += "&Type=" + encodeURIComponent(type);
-                console.log(formInput); 
+                console.log(formInput);
                 // Do some error checking
                 $.post($(this).attr('action'),formInput,null)
                 .done(function() {
@@ -66,9 +62,9 @@ jQuery(document).ready(function($) {
         });
 
     });
-    
+
     $('a[href*=#]').click(function(o) {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
             || location.hostname == this.hostname) {
 
             var target = $(this.hash);
