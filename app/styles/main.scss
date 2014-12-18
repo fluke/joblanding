@@ -34,8 +34,8 @@ main {
     margin-bottom: 8px;
     background-image: url(../images/logo_thumb.jpg);
     background-repeat: no-repeat;
-    background-size: 90%;
-    background-position: 10% 10%;
+    background-size: 80%;
+    background-position: 46.5% 50%;
 }
 
 .footer {
@@ -45,6 +45,9 @@ main {
     left: 0;
     right: 0;
     color: #fff;
+    a {
+        color: #fff;
+    }
 }
 
 .hide-phone {
