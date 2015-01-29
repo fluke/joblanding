@@ -393,8 +393,7 @@ body {
     font-family: 'Montserrat', serif;
     border-radius: 0;
     background: rgba(255,255,255,1);
-    border: 1px solid rgba(0,0,0,0.3);
-    border-width: 0px!important;
+    border: 0px solid rgba(0,0,0,0.3);
     padding: 8px 16px;
     height: 40px;
     color: #333;
@@ -407,7 +406,7 @@ body {
 }
 
 .error {
-    border: 1px solid red;
+    border: 1px solid red!important;
 }
 
 .push-top {
