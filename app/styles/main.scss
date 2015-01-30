@@ -112,16 +112,25 @@ h3 {
     color: #666;
 }
 
+a {
+    color: inherit;
+    border-bottom: 2px solid lightblue;
+}
 
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
 
 
 .btn, .btn:hover {
     font-family: 'Montserrat', serif;
     border-radius: 0;
     background: none;
+    background: #5cb85c;
     border: 2px solid #5cb85c;
     border-width: 2px!important;
-    color: #5cb85c;
+    color: #eee;
     margin-left: 5px;
     &:first-child {
         margin-left: 0;
@@ -423,7 +432,9 @@ form {
     }
     label {
         text-align: left;
+        padding: 8px;
         width: 100%;
+        background: rgba(0,0,0,0.15);
         color: #fff;
         font-size: 18px;
         font-weight: normal;
